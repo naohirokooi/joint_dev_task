@@ -1,6 +1,9 @@
 # 課題の回答は このファイル をご利用下さい。
 # 回答の出力を確認される際は，「ruby main.rb」をターミナルから実行して下さい。
 
+# 課題の回答は このファイル をご利用下さい。
+# 回答の出力を確認される際は，「ruby main.rb」をターミナルから実行して下さい。
+
 def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
@@ -75,13 +78,22 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name,i|
+    p "会員NO.#{i} #{name}さん"
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  foods.each do |food|
+    if food.include?("うに")
+      puts  "#{food}: 好物です"
+    else
+      puts "#{food}:  まあまあ好きです"
+    end
+  end
 
 end
 
@@ -89,6 +101,11 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
+    puts "ユーザーの趣味一覧"
+  sports.flatten.uniq.each.with_index(1) do |sport, i|
+    puts "NO#{i} #{sport}"
+  end
+  
 
 end
 
