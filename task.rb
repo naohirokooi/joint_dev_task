@@ -114,7 +114,7 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  p data.dig(:user , :name)
 end
 
 def q13
@@ -122,14 +122,15 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  p user_data.merge(update_data)
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  array = data.keys
+  p array
 end
 
 def q15
@@ -138,6 +139,9 @@ def q15
 
   # 以下に回答を記載
 
+  puts data1[:age]?  "OK" : "NG"
+  puts data2[:age]?  "OK" : "NG"
+  
 end
 
 def q16
@@ -149,7 +153,11 @@ def q16
   ]
 
   # 以下に回答を記載
+  users.each_index do |i|
 
+    puts "私の名前は#{users[i][:name]}です。年齢は#{users[i][:age]}です。"
+    
+    end
 end
 
 class UserQ17
